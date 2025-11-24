@@ -7,17 +7,16 @@
 Similar tests will be performed in Cuda and Pytorch in order to witness how much slower Pytorch is compared to a raw Cuda kernel.
 
 ### The test:
-- A, B, C, will be 2d arrays of 32x32
-- G will be a 3d array that can collect the full result
-
-16,000 iterations of:
-  20,000 blocks of
-    matrix multiplications temp = A @ B
-    setting G = temp + C
-
-The iterations serve as a sequential loader, and to visually confirm that the GPU load hits 100%.
-The 20,000 block matrix multiplications and bias adders serve as a parallel loader
-
+> - A, B, C, will be 2d arrays of 32x32
+> - G will be a 3d array that can collect the full result
+> 
+> 16,000 iterations of:
+>   20,000 blocks of
+>     matrix multiplications temp = A @ B
+>     setting G = temp + C
+> 
+> The iterations serve as a sequential loader, and to visually confirm that the GPU load hits 100%.
+> The 20,000 block matrix multiplications and bias adders serve as a parallel loader
 
 ___
 ## ~~ CUDA ~~
