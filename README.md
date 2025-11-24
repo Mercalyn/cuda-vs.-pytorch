@@ -36,12 +36,8 @@ Thread size vs. memory useage matters but is also a pain to customize. Only a (3
 
 ___
 ## ~~ PYTORCH ~~
-Processing Results:
--
--
--
--
--
+### Processing Results:
+x
 
 
 Interpretation of Cuda blocks will exist in Pytorch's Z dimension. In other words, Cuda's 20,000 blocks in the X direction will be translated to a depth dimension in Pytorch, giving a size of [20000, 32, 32], allowing this portion to also run in parallel.
