@@ -13,11 +13,11 @@ Similar tests will be performed in Cuda and Pytorch in order to see if Cuda's pe
 > 
 > 16,000 iterations of:
 > - 20,000 blocks of
->    - matrix multiplications temp = A @ B
->    - setting G = temp + C
+>    - matrix multiplications A @ B
+>    - G = (prev result) + C
 > 
 > The iterations serve as a sequential loader, and to visually confirm that the GPU load hits 100%.
-> The 20,000 block matrix multiplications and bias adders serve as a parallel loader
+> 20,000 block matrix multiplications and bias adders serve as a parallel loader
 
 ## CUDA
 ### Processing Results:
