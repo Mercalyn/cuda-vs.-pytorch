@@ -12,9 +12,9 @@ Similar tests will be performed in Cuda and Pytorch in order to see if Cuda's pe
 > - G is a flat or 3d array that can collect the full result (same flat size)
 > 
 > 16,000 iterations of:
-> -    20,000 blocks of
-> -      matrix multiplications temp = A @ B
-> -      setting G = temp + C
+> - 20,000 blocks of
+>    - matrix multiplications temp = A @ B
+>    - setting G = temp + C
 > 
 > The iterations serve as a sequential loader, and to visually confirm that the GPU load hits 100%.
 > The 20,000 block matrix multiplications and bias adders serve as a parallel loader
