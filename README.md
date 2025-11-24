@@ -1,9 +1,10 @@
 # Performance Cuda vs. Pytorch
+Similar tests will be performed in Cuda and Pytorch in order to see if Cuda's performance gains are worth the cognitive overhead compared to Pytorch.
+
 ### PC setup
 > - HOST: AMD Ryzen 5 3600, 32GB System Mem, MSI B450M Gaming Plus
 > - GPU: Nvidia RTX 3090 Ti 24GB VRAM
 
-Similar tests will be performed in Cuda and Pytorch in order to witness how much slower Pytorch is compared to a raw Cuda kernel.
 
 ### The test:
 > - A, B, C, will be 2d arrays of 32x32
