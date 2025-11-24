@@ -19,8 +19,8 @@ The iterations serve as a sequential loader, and to visually confirm that the GP
 The 20,000 block matrix multiplications and bias adders serve as a parallel loader
 
 
-
-## ------------------------------- CUDA ------------------------------- 
+___
+## ~~ CUDA ~~
 ### Processing Results:
 9115ms, 9101ms, 9101ms, 9121ms, 9105ms
 
@@ -34,8 +34,8 @@ The 20,000 block matrix multiplications and bias adders serve as a parallel load
 Thread size vs. memory useage matters but is also a pain to customize. Only a (32, 32) block size of threads was tested. Performance will reflect an unoptimized cuda kernel.
 
 
-
-## ------------------------------- PYTORCH ------------------------------- 
+___
+## ~~ PYTORCH ~~
 Processing Results:
 -
 -
