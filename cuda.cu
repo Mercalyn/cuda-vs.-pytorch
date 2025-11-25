@@ -57,7 +57,7 @@ __global__ void feedForwardOne() {
         int idxA = getLocalIdx(i, threadIdx.y);
         int idxB = getLocalIdx(threadIdx.x, i);
 
-        res += A[idxA] * A[idxB];
+        res += A[idxA] * B[idxB];
     }
 
     // set G to matmul + bias
