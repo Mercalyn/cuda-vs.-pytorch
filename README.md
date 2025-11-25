@@ -37,8 +37,11 @@ Similar tests will be performed in Cuda and Pytorch in order to see if Cuda's pe
 
 
 ## PYTORCH
+### Cuda block Interpretation
+> Cuda blocks will exist in Pytorch's Z dimension. In other words, Cuda's 20,000 blocks in the X direction will be translated to a depth dimension in Pytorch, giving a tensor size of [20000, 32, 32], allowing this portion to also run in parallel. 
+
 ### Smart Backend
-> Interpretation of Cuda blocks will exist in Pytorch's Z dimension. In other words, Cuda's 20,000 blocks in the X direction will be translated to a depth dimension in Pytorch, giving a size of [20000, 32, 32], allowing this portion to also run in parallel. One snag was that Pytorch's backend is a dynamic graph system that heavily optimizes itself, so the A array had to also be a depth of 20000 like G in order to prevent it from caching results and shortcutting. More VRAM is expected to be used.
+> One snag was that Pytorch's backend is a dynamic graph system that heavily optimizes itself, so the A array had to also be a depth of 20000 like G in order to prevent it from caching results and shortcutting. More VRAM is expected to be used.
 
 
 ## RESULTS
