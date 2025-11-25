@@ -61,7 +61,7 @@ __global__ void feedForwardOne() {
     }
 
     // set G to matmul + bias
-    G[gid] = res + A[tid];
+    G[gid] = res + C[tid];
 }
 
 
