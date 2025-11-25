@@ -6,6 +6,9 @@ Similar tests will be performed in Cuda and Pytorch in order to see if Cuda's pe
 > - HOST: AMD Ryzen 5 3600, 32GB System Mem, MSI B450M Gaming Plus
 > - GPU: Nvidia RTX 3090 Ti 24GB VRAM
 
+### Notes
+> - Both tests observed 100% GPU load for the majority of the stress.
+> - Both scripts use slightly different timing mechanisms, so some amount of error should be given.
 
 ### The test
 > Given:
