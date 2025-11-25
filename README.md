@@ -30,10 +30,10 @@ Similar tests will be performed in Cuda and Pytorch in order to see if Cuda's pe
 > 2. Normally within one single multiplication it must select the correct location of A and B to multiply-accumulate. If this is replaced with a fixed multiplication of .5 * .5 and then accumulated, there is some smart caching somewhere and a speedup from 9100ms to 1440ms is observed. This test contains an empty lookup for A and B in order to prove the speedup does not come from the lack of data lookups (in code), but caching of data.
 
 ### Non-optimized thread size
-Thread size vs. memory useage matters but is also a pain to customize. Only a (32, 32) block size of threads was tested. Performance will reflect an unoptimized cuda kernel.
+> Thread size vs. memory useage matters but is also a pain to customize. Only a (32, 32) block size of threads was tested. Performance will reflect an unoptimized cuda kernel.
 
 ### Non-optimized unified memory
-The Cuda test uses unified global memory instead of manually copying memory Host <-> Device. This could result in slowdowns.
+> The Cuda test uses unified global memory instead of manually copying memory Host <-> Device. This could result in slowdowns.
 
 
 ## PYTORCH
