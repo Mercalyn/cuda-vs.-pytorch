@@ -1,6 +1,6 @@
 # Performance Cuda vs. Pytorch
 ![title img](title.png)
-Similar tests will be performed in Cuda and Pytorch in order to see if Cuda's performance gains are worth the cognitive overhead compared to Pytorch.
+Similar tests will be performed in Cuda and Pytorch in order to see if Cuda's performance gains are worth the cognitive overhead compared to Pytorch. Results at the bottom.
 
 ### PC setup
 > - HOST: AMD Ryzen 5 3600, 32GB System Mem, MSI B450M Gaming Plus
@@ -27,6 +27,9 @@ Similar tests will be performed in Cuda and Pytorch in order to see if Cuda's pe
 
 ### Non-optimized thread size
 Thread size vs. memory useage matters but is also a pain to customize. Only a (32, 32) block size of threads was tested. Performance will reflect an unoptimized cuda kernel.
+
+### Non-optimized unified memory
+The Cuda test uses unified global memory instead of manually copying memory Host <-> Device. This could result in slowdowns.
 
 
 ## PYTORCH
