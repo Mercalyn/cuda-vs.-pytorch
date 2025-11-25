@@ -7,13 +7,13 @@ Similar tests will be performed in Cuda and Pytorch in order to see if Cuda's pe
 > - GPU: Nvidia RTX 3090 Ti 24GB VRAM
 
 ### Notes
-> - Both tests observed 100% GPU load for the majority of the stress.
-> - Both scripts use slightly different timing mechanisms, so some amount of error should be given.
+> - All tests observed 100% GPU load for the majority of the stress.
+> - Both scripts use slightly different timing mechanisms, but were cuda device synchronized at similar points.
 
 ### The test
 > Given:
 > - A, B, C, are 2d arrays of 32x32
-> - G is a flat or 3d array that can collect the full result (same flat size)
+> - G is an array that can collect the full result (flat size: 20.5M)
 > 
 > 16,000 iterations of:
 > - 20,000 blocks of
@@ -22,6 +22,7 @@ Similar tests will be performed in Cuda and Pytorch in order to see if Cuda's pe
 > 
 > The iterations serve as a sequential loader, and to visually confirm that the GPU load hits 100%.
 > 20,000 block matrix multiplications and bias adders serve to emulate a neural network under stress.
+> Total: 10.5 Trillion multiplications and 327 Billion additions
 
 ## CUDA
 ### Interesting cuda compiler caching speedups
