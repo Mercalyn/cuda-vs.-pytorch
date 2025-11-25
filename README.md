@@ -34,8 +34,9 @@ Thread size vs. memory useage matters but is also a pain to customize. Only a (3
 
 
 ## PYTORCH
-### Processing Results:
-x
-
-
 Interpretation of Cuda blocks will exist in Pytorch's Z dimension. In other words, Cuda's 20,000 blocks in the X direction will be translated to a depth dimension in Pytorch, giving a size of [20000, 32, 32], allowing this portion to also run in parallel.
+
+
+## RESULTS
+![test results](review.png)
+This engineer-student concludes that Pytorch must contain some smart backend optimizations! The results speak for themselves: If the programmer in question is not an experienced Cuda developer with knowledge of hyper-niche optimization techniques (the overall reason for its worse performance in this test), Pytorch would be the meta. It surpasses naive Cuda code in performance by a negligible amount, not to mention blazing fast development time and comfort to the person sitting behind the keyboard.
